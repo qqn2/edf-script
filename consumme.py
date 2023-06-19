@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Lire le fichier CSV en spécifiant seulement les colonnes 1 et 2 et l'encodage
-df = pd.read_csv("C:\\Users\\3600X-2700\\Desktop\\test.csv", usecols=[0, 1], delimiter=';', encoding='latin-1', dtype=str)
+df = pd.read_csv("insert//path//to//csv//file", usecols=[0, 1], delimiter=';', encoding='latin-1', dtype=str)
 
 dates = []
 puissances = []
@@ -10,8 +10,8 @@ puissances = []
 df.columns = ['Date', 'Puissance']
 
 # Obtenir le nombre total de lignes du DataFrame
-#N = df.shape[0]
-N = 15564
+N = df.shape[0]
+#N = 15564
 # Parcourir les lignes du dataframe jusqu'à la ligne N
 for index, row in df.iterrows():
     if index >= N:
